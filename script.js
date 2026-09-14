@@ -748,6 +748,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (formInlineLead) {
     formInlineLead.addEventListener('submit', (e) => {
       e.preventDefault();
+      localStorage.setItem('seli_form_submitted', 'true');
       const name = document.getElementById('inlineLeadName')?.value.trim() || 'bạn';
       const phone = document.getElementById('inlineLeadPhone')?.value.trim() || '';
 
@@ -821,7 +822,12 @@ document.addEventListener('DOMContentLoaded', () => {
   let isPopupCurrentlyOpen = false;
   let popup3MinTimer = null;
 
-  function showScrollPopup() {
+  function isFormSubmitted() {
+    return localStorage.getItem('seli_form_submitted') === 'true';
+  }
+
+  function showScrollPopup(isAuto = false) {
+    if (isAuto && isFormSubmitted()) return;
     if (seliScrollPopup && !isPopupCurrentlyOpen) {
       seliScrollPopup.classList.add('active');
       seliScrollPopup.setAttribute('aria-hidden', 'false');
@@ -830,7 +836,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function closeScrollPopup() {
+  function closeScrollPopup(isSubmitted = false) {
     if (seliScrollPopup && isPopupCurrentlyOpen) {
       seliScrollPopup.classList.remove('active');
       seliScrollPopup.setAttribute('aria-hidden', 'true');
@@ -838,52 +844,59 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = '';
 
       // Clear any existing timer
-      if (popup3MinTimer) clearTimeout(popup3MinTimer);
+      if (popup3MinTimer) {
+        clearTimeout(popup3MinTimer);
+        popup3MinTimer = null;
+      }
 
-      // Re-appear after user spends 3 minutes (180,000 ms) on the site after closing
-      popup3MinTimer = setTimeout(() => {
-        showScrollPopup();
-      }, 180000);
+      // Re-appear after user spends 3 minutes (180,000 ms) on the site ONLY IF not submitted
+      if (!isSubmitted && !isFormSubmitted()) {
+        popup3MinTimer = setTimeout(() => {
+          showScrollPopup(true);
+        }, 180000);
+      }
     }
   }
 
   // Trigger 1: Scroll to 50% of the website
   window.addEventListener('scroll', () => {
-    if (hasShownScrollPopup || isPopupCurrentlyOpen) return;
+    if (hasShownScrollPopup || isPopupCurrentlyOpen || isFormSubmitted()) return;
 
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
 
     if (docHeight > 0 && (scrollTop / docHeight) >= 0.5) {
       hasShownScrollPopup = true;
-      showScrollPopup();
+      showScrollPopup(true);
     }
   });
 
   // Event Listeners for Closing Popup
   if (btnClosePopup) {
-    btnClosePopup.addEventListener('click', closeScrollPopup);
+    btnClosePopup.addEventListener('click', () => closeScrollPopup(false));
   }
 
   if (seliScrollPopup) {
     seliScrollPopup.addEventListener('click', (e) => {
       if (e.target === seliScrollPopup) {
-        closeScrollPopup();
+        closeScrollPopup(false);
       }
     });
   }
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && isPopupCurrentlyOpen) {
-      closeScrollPopup();
+      closeScrollPopup(false);
     }
   });
 
   if (popupConsultForm) {
     popupConsultForm.addEventListener('submit', (e) => {
       e.preventDefault();
+      localStorage.setItem('seli_form_submitted', 'true');
       alert('Cảm ơn bạn! Đội ngũ SELI sẽ liên hệ với bạn trong thời gian sớm nhất.');
-      closeScrollPopup();
+      popupConsultForm.reset();
+      closeScrollPopup(true);
     });
   }
 
@@ -898,7 +911,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (ctaTarget && !ctaTarget.closest('#seliScrollPopup') && !ctaTarget.matches('#btnInlineSubmit')) {
       e.preventDefault();
-      showScrollPopup();
+      showScrollPopup(false);
     }
   });
 
