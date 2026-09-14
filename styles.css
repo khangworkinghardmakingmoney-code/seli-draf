@@ -3001,7 +3001,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #FFFFFF;
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -3526,7 +3526,7 @@ body {
   max-height: 24px;
   max-width: 85px;
   object-fit: contain;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
 }
 
 /* Hover Effect 1: Transform to SELI Navy (#102551) */
@@ -3857,6 +3857,12 @@ body {
   .seli-category-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  .category-copy-left {
+    order: 1;
+  }
+  .category-cards-right {
+    order: 2;
   }
 }
 
@@ -6428,7 +6434,8 @@ body {
    MASTER MOBILE & TABLET RESPONSIVE ADAPTATIONS (ALL SECTIONS)
    ========================================================================== */
 
-html, body {
+html,
+body {
   overflow-x: hidden;
   width: 100%;
 }
@@ -6578,6 +6585,14 @@ html, body {
     align-items: flex-start;
   }
 
+  .category-copy-left {
+    order: 1;
+  }
+
+  .category-cards-right {
+    order: 2;
+  }
+
   .statement-title,
   .category-main-title {
     font-size: clamp(1.65rem, 5vw, 2.25rem) !important;
@@ -6617,6 +6632,7 @@ html, body {
 
 /* Smartphone Mobile Layout (max-width: 768px) */
 @media (max-width: 768px) {
+
   /* Section Padding Standardization */
   .seli-problem-statement-section,
   .seli-category-split-section,
@@ -6740,7 +6756,7 @@ html, body {
   }
 
   .flip-title {
-    font-size: 15.5px !important;
+    font-size: 20px !important;
     line-height: 1.3 !important;
     margin: 0 0 6px 0 !important;
   }
@@ -7165,18 +7181,89 @@ html, body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
-@keyframes seliDraw { to { stroke-dashoffset: 0; } }
-@keyframes seliPulse { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
-@keyframes seliGlow { 0%, 100% { box-shadow: 0 10px 34px rgba(240, 96, 61, 0.35); } 50% { box-shadow: 0 10px 44px rgba(240, 96, 61, 0.6); } }
-@keyframes seliFadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-@keyframes seliCue { 0%, 100% { opacity: 0.25; transform: translateY(0); } 50% { opacity: 0.9; transform: translateY(6px); } }
-@keyframes seliAppear { to { opacity: 1; } }
-@keyframes seliRipple { 0% { transform: scale(0.3); opacity: 0.9; } 70% { opacity: 0.15; } 100% { transform: scale(2.6); opacity: 0; } }
+@keyframes seliDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes seliPulse {
+
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes seliGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 10px 34px rgba(240, 96, 61, 0.35);
+  }
+
+  50% {
+    box-shadow: 0 10px 44px rgba(240, 96, 61, 0.6);
+  }
+}
+
+@keyframes seliFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes seliCue {
+
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: translateY(6px);
+  }
+}
+
+@keyframes seliAppear {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes seliRipple {
+  0% {
+    transform: scale(0.3);
+    opacity: 0.9;
+  }
+
+  70% {
+    opacity: 0.15;
+  }
+
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
 
 @media (max-width: 768px) {
   .seli-mini-test-section {
     padding: 32px 12px;
   }
+
   .seli-mini-iframe {
     height: 820px;
     border-radius: 16px;
