@@ -894,7 +894,9 @@ document.addEventListener('DOMContentLoaded', () => {
     popupConsultForm.addEventListener('submit', (e) => {
       e.preventDefault();
       localStorage.setItem('seli_form_submitted', 'true');
-      alert('Cảm ơn bạn! Đội ngũ SELI sẽ liên hệ với bạn trong thời gian sớm nhất.');
+      const name = document.getElementById('popupLeadName')?.value.trim() || 'bạn';
+      const phone = document.getElementById('popupLeadPhone')?.value.trim() || '';
+      showToast('Cảm ơn ' + name + '! Đội ngũ SELI sẽ liên hệ tư vấn với bạn qua SĐT ' + phone + ' trong thời gian sớm nhất.');
       popupConsultForm.reset();
       closeScrollPopup(true);
     });
@@ -904,7 +906,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // EXCEPT the final inline form submission button (#btnInlineSubmit)
   document.addEventListener('click', (e) => {
     const ctaTarget = e.target.closest(
-      '.btn-nav-primary, .btn-nav-outline, #btnStartSeli, #btnStatementCta, ' +
+      '.btn-nav-primary, .btn-nav-outline, #btnHeroConsult, #btnStartSeli, #btnStatementCta, ' +
       '.btn-view-report-sample, #btnScienceConsult, .btn-pkg-contact, .btn-cta-experience, ' +
       'a[href="#demo"], a[href="#contact"], a[href="#login"]'
     );
