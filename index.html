@@ -43,8 +43,6 @@
           <nav class="seli-hero-nav-links">
             <a href="#seli-problem-statement" class="nav-item active">Ứng dụng</a>
             <a href="#seli-goleman-eq" class="nav-item">Nền tảng Khoa học</a>
-            <a href="#seli-mini-test" class="nav-item">Mini SELI</a>
-            <a href="#seli-pricing" class="nav-item">Chi phí</a>
             <a href="#seli-faq" class="nav-item">FAQ</a>
           </nav>
 
@@ -81,12 +79,9 @@
           </p>
 
           <div class="seli-hero-cta-group">
-            <a href="#seli-mini-test" class="seli-btn-primary">
-              <span>Làm Mini SELI Miễn Phí</span>
+            <a href="#seli-final-cta" class="seli-btn-primary" id="btnHeroConsult">
+              <span>Nhận Tư Vấn Từ The New Leaders</span>
             </a>
-            <button class="seli-btn-outline" id="btnStartSeli">
-              <span>Đăng Ký Tư Vấn</span>
-            </button>
           </div>
 
           <!-- Hero Key Features Checkmark List directly underneath CTAs -->
@@ -225,24 +220,25 @@
               </div>
             </div>
 
-            <!-- Bento Box Card 04 (Bottom-Left): Chiến lược phát triển năng lực -->
+            <!-- Bento Box Card 04 (Bottom-Left): Nhóm phù hợp với giai đoạn nào của tổ chức -->
             <div class="seli-bento-card bento-card-4" id="cardFeature4">
-              <h3 class="floating-card-title">Chiến lược phát triển toàn diện</h3>
-              <div class="strategy-list-container">
-                <div class="strategy-list-item">
-                  <div class="phase-title-wrap"><span class="phase-dot dot-orange"></span><span class="phase-name">Hành
-                      động Ngắn hạn</span></div>
-                  <span class="phase-badge badge-orange">1–30 ngày</span>
+              <h3 class="floating-card-title">Nhóm phù hợp với giai đoạn tổ chức</h3>
+              <div class="org-stage-list-container">
+                <div class="org-stage-item">
+                  <span class="org-stage-name">Vận hành ổn định</span>
+                  <span class="org-stage-badge badge-high">CAO</span>
                 </div>
-                <div class="strategy-list-item">
-                  <div class="phase-title-wrap"><span class="phase-dot dot-yellow"></span><span class="phase-name">Giải
-                      pháp Trung hạn</span></div>
-                  <span class="phase-badge badge-yellow">31–60 ngày</span>
+                <div class="org-stage-item">
+                  <span class="org-stage-name">Tăng trưởng vừa phải</span>
+                  <span class="org-stage-badge badge-high">CAO</span>
                 </div>
-                <div class="strategy-list-item">
-                  <div class="phase-title-wrap"><span class="phase-dot dot-blue"></span><span class="phase-name">Chiến
-                      lược Dài hạn</span></div>
-                  <span class="phase-badge badge-blue">61–90 ngày</span>
+                <div class="org-stage-item">
+                  <span class="org-stage-name">Tăng trưởng nhanh</span>
+                  <span class="org-stage-badge badge-medium">TRUNG BÌNH</span>
+                </div>
+                <div class="org-stage-item">
+                  <span class="org-stage-name">Chuyển đổi quyết liệt</span>
+                  <span class="org-stage-badge badge-prep">CẦN CHUẨN BỊ</span>
                 </div>
               </div>
             </div>
@@ -434,7 +430,8 @@
 
           <div class="statement-cta-wrap">
             <button class="seli-btn-primary" id="btnStatementCta">
-              <span>Khám phá Bản đồ Năng lực Lãnh đạo SELI</span>
+              <span>Nhận Tư Vấn Từ The New Leaders
+              </span>
             </button>
           </div>
         </div>
@@ -1153,7 +1150,8 @@
         <!-- Science Section CTA Button -->
         <div class="science-cta-wrap">
           <button class="seli-btn-primary btn-science-consult" id="btnScienceConsult">
-            <span>Đăng ký tư vấn Nền tảng Khoa học SELI</span>
+            <span>Nhận Tư Vấn Từ The New Leaders
+            </span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
               stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -1166,10 +1164,10 @@
     </section>
 
     <!-- ================================================================= -->
-    <!-- BẮT ĐẦU: KHỐI MINI SELI (EXPERIENCE DEMO STANDALONE IFRAME)       -->
+    <!-- TẠM HIDE KHỐI MINI SELI                                          -->
     <!-- ================================================================= -->
     <section class="seli-mini-test-section" id="seli-mini-test"
-      style="background: #081026; padding: 60px 24px 80px; position: relative;">
+      style="display: none !important; background: #081026; padding: 60px 24px 80px; position: relative;">
       <div style="max-width: 1200px; margin: 0 auto;">
         <!-- Header / Eyebrow for Mini SELI -->
         <div style="text-align: center; margin-bottom: 32px;">
@@ -1570,234 +1568,6 @@
       </div>
     </section>
 
-    <section class="seli-pricing-section" id="seli-pricing">
-      <div class="seli-container">
-
-        <!-- Section Header -->
-        <div class="pricing-header">
-          <div class="seli-eyebrow-pill pricing-eyebrow-pill">
-            <span class="pill-dot-active"></span>
-            <span class="eyebrow-text">BÁO GIÁ</span>
-          </div>
-          <h2 class="pricing-title">Chi phí tối ưu cho tăng trưởng tối đa
-          </h2>
-        </div>
-
-        <!-- 4 Cards Grid -->
-        <div class="pricing-cards-grid">
-
-          <!-- Card 1: INDIVIDUAL -->
-          <div class="pricing-card">
-            <h3 class="pkg-title">INDIVIDUAL</h3>
-            <div class="pkg-price-wrap">
-              <span class="pkg-price">1,500,000</span>
-              <span class="pkg-unit">VND/Pax</span>
-            </div>
-            <ul class="pkg-feature-list">
-              <li class="feature-item enabled">
-                <span class="check-icon orange">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </span>
-                <strong>Personal Report</strong>
-              </li>
-              <li class="feature-item disabled">
-                <span class="check-icon gray">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                  </svg>
-                </span>
-                <span>Employer Report</span>
-              </li>
-              <li class="feature-item disabled">
-                <span class="check-icon gray">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                  </svg>
-                </span>
-                <span>Strategic Team Report</span>
-              </li>
-              <li class="feature-item disabled">
-                <span class="check-icon gray">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                  </svg>
-                </span>
-                <span>Dashboard</span>
-                <span class="tag-upcoming gray">Sắp ra mắt</span>
-              </li>
-            </ul>
-            <button class="btn-pkg-contact btn-navy">LIÊN HỆ TƯ VẤN</button>
-          </div>
-
-          <!-- Card 2: PEOPLE SELECTION -->
-          <div class="pricing-card">
-            <h3 class="pkg-title">PEOPLE SELECTION</h3>
-            <div class="pkg-price-wrap">
-              <span class="pkg-price">2,000,000</span>
-              <span class="pkg-unit">VND/Pax</span>
-            </div>
-            <ul class="pkg-feature-list">
-              <li class="feature-item enabled">
-                <span class="check-icon orange">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </span>
-                <strong>Personal Report</strong>
-              </li>
-              <li class="feature-item enabled">
-                <span class="check-icon orange">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </span>
-                <strong>Employer Report</strong>
-              </li>
-              <li class="feature-item disabled">
-                <span class="check-icon gray">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                  </svg>
-                </span>
-                <span>Strategic Team Report</span>
-              </li>
-              <li class="feature-item enabled">
-                <span class="check-icon orange">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </span>
-                <strong>Dashboard</strong>
-                <span class="tag-upcoming orange">Sắp ra mắt</span>
-              </li>
-            </ul>
-            <button class="btn-pkg-contact btn-navy">LIÊN HỆ TƯ VẤN</button>
-          </div>
-
-          <!-- Card 3: TRANSFORMATION (HIGHLIGHTED CARD WITH GLOW & PILL) -->
-          <div class="pricing-card card-highlight-transformation">
-            <div class="pill-best-value">Tối Ưu Nhất</div>
-            <h3 class="pkg-title">TRANSFORMATION</h3>
-            <div class="pkg-price-wrap">
-              <span class="pkg-price">2,500,000</span>
-              <span class="pkg-unit">VND/Pax</span>
-            </div>
-            <ul class="pkg-feature-list">
-              <li class="feature-item enabled">
-                <span class="check-icon orange">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </span>
-                <strong>Personal Report</strong>
-              </li>
-              <li class="feature-item enabled">
-                <span class="check-icon orange">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </span>
-                <strong>Employer Report</strong>
-              </li>
-              <li class="feature-item enabled">
-                <span class="check-icon orange">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </span>
-                <strong>Strategic Team Report</strong>
-              </li>
-              <li class="feature-item enabled">
-                <span class="check-icon orange">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </span>
-                <strong>Dashboard</strong>
-                <span class="tag-upcoming orange">Sắp ra mắt</span>
-              </li>
-            </ul>
-            <button class="btn-pkg-contact btn-orange">LIÊN HỆ TƯ VẤN</button>
-          </div>
-
-          <!-- Card 4: STRATEGIC -->
-          <div class="pricing-card">
-            <h3 class="pkg-title">STRATEGIC</h3>
-            <div class="pkg-price-wrap">
-              <span class="pkg-price">2,000,000</span>
-              <span class="pkg-unit">VND/Pax</span>
-            </div>
-            <ul class="pkg-feature-list">
-              <li class="feature-item enabled">
-                <span class="check-icon orange">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </span>
-                <strong>Personal Report</strong>
-              </li>
-              <li class="feature-item disabled">
-                <span class="check-icon gray">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                  </svg>
-                </span>
-                <span>Employer Report</span>
-              </li>
-              <li class="feature-item enabled">
-                <span class="check-icon orange">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </span>
-                <strong>Strategic Team Report</strong>
-              </li>
-              <li class="feature-item enabled">
-                <span class="check-icon orange">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </span>
-                <strong>Dashboard</strong>
-                <span class="tag-upcoming orange">Sắp ra mắt</span>
-              </li>
-            </ul>
-            <button class="btn-pkg-contact btn-navy">LIÊN HỆ TƯ VẤN</button>
-          </div>
-
-        </div>
-
-        <!-- Note below pricing -->
-        <p class="pricing-disclaimer">
-          * Giá chưa bao gồm VAT. Personal Report & Employer Report sẽ được tính trên từng người tham gia. Team Report
-          sẽ được tính theo từng nhóm
-        </p>
-
-      </div>
-    </section>
 
     <section class="seli-faq-section" id="seli-faq">
       <div class="seli-container">
@@ -2159,12 +1929,42 @@
                 </div>
               </div>
 
+              <!-- Company Field -->
+              <div class="inline-form-group">
+                <label for="inlineLeadCompany" class="inline-form-label">Công ty <span
+                    class="required-star">*</span></label>
+                <div class="inline-input-wrapper">
+                  <svg class="inline-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                  <input type="text" id="inlineLeadCompany" class="inline-input" placeholder="Tên công ty" required>
+                </div>
+              </div>
+
+              <!-- Position Field -->
+              <div class="inline-form-group">
+                <label for="inlineLeadPosition" class="inline-form-label">Vị trí <span
+                    class="required-star">*</span></label>
+                <div class="inline-input-wrapper">
+                  <svg class="inline-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <input type="text" id="inlineLeadPosition" class="inline-input" placeholder="Vị trí / Chức danh"
+                    required>
+                </div>
+              </div>
+
             </div>
 
             <!-- Submit CTA Button -->
             <div class="inline-form-submit">
               <button type="submit" class="seli-btn-primary btn-inline-submit" id="btnInlineSubmit">
-                <span>Nhận Tư vấn và Demo SELI</span>
+                <span>Nhận Tư Vấn Từ The New Leaders
+                </span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
                   stroke-linecap="round" stroke-linejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -2213,10 +2013,10 @@
       <div class="seli-popup-header">
         <div class="seli-eyebrow-pill popup-eyebrow-pill">
           <span class="pill-dot-active"></span>
-          <span class="eyebrow-text">TƯ VẤN & DEMO SELI</span>
+          <span class="eyebrow-text">TƯ VẤN · THE NEW LEADERS</span>
         </div>
         <h3 class="seli-popup-title">
-          Nhận Tư Vấn & Báo Cáo Mẫu Từ The New Leaders
+          Nhận Tư Vấn Từ The New Leaders
         </h3>
         <p class="seli-popup-desc">
           Khám phá giải pháp chuyển hóa dữ liệu hành vi thành kịch bản tác động nhân sự 6–18 tháng dành riêng cho tổ
@@ -2226,16 +2026,23 @@
 
       <form class="seli-popup-form" id="popupConsultForm">
         <div class="popup-input-group">
-          <input type="text" class="popup-input" placeholder="Họ và tên của bạn *" required>
+          <input type="text" id="popupLeadName" class="popup-input" placeholder="Họ và tên của bạn *" required>
         </div>
         <div class="popup-input-group">
-          <input type="email" class="popup-input" placeholder="Email công việc *" required>
+          <input type="email" id="popupLeadEmail" class="popup-input" placeholder="Email công việc *" required>
         </div>
         <div class="popup-input-group">
-          <input type="tel" class="popup-input" placeholder="Số điện thoại liên hệ *" required>
+          <input type="tel" id="popupLeadPhone" class="popup-input" placeholder="Số điện thoại liên hệ *" required>
+        </div>
+        <div class="popup-input-group">
+          <input type="text" id="popupLeadCompany" class="popup-input" placeholder="Tên công ty của bạn *" required>
+        </div>
+        <div class="popup-input-group">
+          <input type="text" id="popupLeadPosition" class="popup-input" placeholder="Vị trí / Chức danh *" required>
         </div>
         <button type="submit" class="seli-btn-primary btn-popup-submit">
-          <span>ĐĂNG KÝ NHẬN TƯ VẤN NGAY</span>
+          <span>Nhận Tư Vấn Từ The New Leaders
+          </span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
             stroke-linecap="round" stroke-linejoin="round">
             <line x1="5" y1="12" x2="19" y2="12"></line>
