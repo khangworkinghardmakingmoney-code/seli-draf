@@ -2018,6 +2018,87 @@ body {
   padding: 20px 22px;
 }
 
+.org-stage-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.org-stage-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+[data-theme="dark"] .org-stage-item {
+  border-bottom-color: rgba(167, 192, 255, 0.12);
+}
+
+.org-stage-item:last-child {
+  border-bottom: none;
+}
+
+.org-stage-name {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #1E293B;
+  line-height: 1.3;
+}
+
+[data-theme="dark"] .org-stage-name {
+  color: #FFFFFF;
+}
+
+.org-stage-badge {
+  font-family: var(--font-body);
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.org-stage-badge.badge-high {
+  color: #16A34A;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+[data-theme="dark"] .org-stage-badge.badge-high {
+  color: #4ADE80;
+  background: rgba(74, 222, 128, 0.16);
+  border-color: rgba(74, 222, 128, 0.35);
+}
+
+.org-stage-badge.badge-medium {
+  color: #D97706;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+[data-theme="dark"] .org-stage-badge.badge-medium {
+  color: #FBBF24;
+  background: rgba(251, 191, 36, 0.16);
+  border-color: rgba(251, 191, 36, 0.35);
+}
+
+.org-stage-badge.badge-prep {
+  color: #EA580C;
+  background: rgba(240, 96, 61, 0.12);
+  border: 1px solid rgba(240, 96, 61, 0.3);
+}
+
+[data-theme="dark"] .org-stage-badge.badge-prep {
+  color: #F97316;
+  background: rgba(249, 115, 22, 0.18);
+  border-color: rgba(249, 115, 22, 0.35);
+}
+
 .strategy-list-container {
   display: flex;
   flex-direction: column;
@@ -6240,7 +6321,7 @@ body {
 
 .inline-form-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   width: 100%;
   margin-bottom: 28px;
@@ -7040,6 +7121,8 @@ body {
   position: relative;
   width: 100%;
   max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
   background: linear-gradient(135deg, #0E1B3D 0%, #0B142B 100%);
   border: 1px solid rgba(167, 192, 255, 0.25);
   border-radius: 24px;
